@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" content="m3u8 downloader for web">
   <meta name="description" content="m3u8 downloader for web, Momo's Blog, LuckyMomo">
-  <title>m3u8 downloader</title>
+  <title>SKYのM3U8 Downloader</title>
   <style>
   /*全局设置*/
   html, body {
@@ -53,7 +53,7 @@
     padding: 6px 12px;
     z-index: 99;
   }
-  .m-p-help {
+  /* .m-p-help {
     position: fixed;
     right: 50px;
     top: 50px;
@@ -68,7 +68,7 @@
     cursor: pointer;
     background-color: #eff3f6;
     background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-  }
+  }*/
   .m-p-github:hover, .m-p-other:hover, .m-p-help {
     opacity: 0.9;
   }
@@ -76,7 +76,7 @@
     bottom: 30px;
   }
   /*广告*/
-  .m-p-refer {
+  /* .m-p-refer {
     position: absolute;
     left: 50px;
     bottom: 50px;
@@ -184,6 +184,7 @@
       transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
     }
   }
+*/
   /*顶部信息录入*/
   .m-p-temp-url {
     padding-top: 50px;
@@ -325,19 +326,27 @@
 <section id="m-app" v-cloak>
   <!--顶部操作提示-->
   <section class="m-p-action g-box">{{tips}}</section>
-  <a class="m-p-help" target="_blank" href="https://segmentfault.com/a/1190000021847172">?</a>
-  <a class="m-p-github" target="_blank" href="https://github.com/Momo707577045/m3u8-downloader">github</a>
-  <a class="m-p-other" target="_blank" href="http://blog.luckly-mjw.cn/tool-show/index.html">其他实用工具</a>
+<a target="_blank" href="https://blog.000714.xyz">Blog</a>
+<a target="_blank" href="https://000714.xyz">HOMEPAGE</a>
+<a target="_blank" ></a>Author:@BlueSkyXN</a>
+<a target="_blank" ></a>Mail:BlueSky@000714.xyz</a>
+<!-- <a class="m-p-help" target="_blank" href="https://segmentfault.com/a/1190000021847172">?</a>-->
+<a class="m-p-github" target="_blank" href="https://github.com/BlueSkyXN/m3u8-downloader">github</a>
+<!-- <a class="m-p-other" target="_blank" href="http://blog.luckly-mjw.cn/tool-show/index.html">其他实用工具</a>-->
 
   <!--广告-->
-  <a v-if="isShowRefer" class="m-p-refer" target="_blank" href="https://segmentfault.com/a/1190000024416860">
+ <!--
+ <a v-if="isShowRefer" class="m-p-refer" target="_blank" href="https://segmentfault.com/a/1190000024416860">
     <img src="./imgs/001.png" class="link">
     <img src="./imgs/003.png" class="text">
     <i class="close" @click.prevent="isShowRefer=false"/>
   </a>
+  -->
 
   <!--文件载入-->
-  <div class="m-p-temp-url">测试链接：http://1257120875.vod2.myqcloud.com/0ef121cdvodtransgzp1257120875/3055695e5285890780828799271/v.f230.m3u8</div>
+ <!--
+ <div class="m-p-temp-url">测试链接：http://1257120875.vod2.myqcloud.com/0ef121cdvodtransgzp1257120875/3055695e5285890780828799271/v.f230.m3u8</div>
+ -->
   <section class="m-p-input-container">
     <input type="text" v-model="url" accept=".ttf" :disable="downloading" placeholder="请输入 m3u8 链接">
     <div class="" v-if="!downloading || !isGetMP4" @click="getM3U8" :class="{'disable':downloading}">原格式下载</div>
@@ -799,5 +808,10 @@ new Vue({
 })
 // script注入
 </script>
-
+<footer style="text-align:center;">
+    <p><a href="https://blog.000714.xyz">SKYの博客-苍穹の下</a>丨<a href="https://000714.xyz">SKYの主页</a>丨<a href="https://github.com/blueSkyXN">SKYのGithub</a> </p>
+        <h4>如果您发现有人滥用/违法违规使用本站服务或有其它诉求/意见/反馈</h4>
+        <h4>请联系我：TG@BlueSkyXN3 Mail:BlueSky@000714.xyz</h4>
+     <p><a href="http://www.beian.miit.gov.cn" target="_blank">闽ICP备20009316号</a></p>
+</footer>
 </html>
